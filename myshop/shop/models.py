@@ -1,5 +1,5 @@
 from django.db import models
-from django.shortcuts import reverse
+from django.urls import reverse
 
 # Create your models here.
 
@@ -31,7 +31,7 @@ class Product(models.Model):
 
     class Meta:
         ordering = ('name',)
-        index_together = (('id', 'slug'), )
+        index_together = (('id', 'slug'),)
 
     def __str__(self):
         return self.name
