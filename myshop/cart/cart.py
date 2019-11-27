@@ -23,7 +23,7 @@ class Cart(object):
             yield item
 
     def __len__(self):
-        return sum([item['quantity'] for item in self.cart.values()])
+        return sum(item['quantity'] for item in self.cart.values())
 
     def add(self, product, quantity=1, update_quantity=False):
         product_id = str(product.id)
@@ -36,7 +36,7 @@ class Cart(object):
         self.save()
 
     def save(self):
-        self.session.modefied = True
+        self.session.modified = True
 
     def remove(self, product):
         product_id = str(product.id)

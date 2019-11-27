@@ -12,7 +12,7 @@
         </li>
         {% for c in categories %}
         <li {% if category.slug == c.slug %}class='selected'{% endif %}>
-            <a href="/{{c.slug}}">{{ c.name }}</a>
+            <a href="/{{ c.slug}}">{{ c.name }}</a>
         </li>
         {% endfor %}
     </ul>
